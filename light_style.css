@@ -1,0 +1,47 @@
+body {
+	color: #000;
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+main {
+	width: 40%;
+	margin: 0 auto;
+	
+}
+
+section {
+	padding: 30px;
+	margin: 10px;
+	background-color: #cffff0;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+a {
+	color: #27e2a7;
+}
+
+button {
+	color: #27e2a7;
+	background-color: #fff;
+	height: 3em;
+	width: 6em;
+}
+
+input {
+	background-color: #fff;
+	font-size: 18px;
+}
