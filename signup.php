@@ -37,6 +37,12 @@ if (isset($data['do_signup'])) {
     	$query = $db->prepare($sql);
     	$query->execute(['login' => $data['login'], 'email' => $data['email'], 'password' => $password]);
     	echo '<div style="color: green;"> You have registered successfully </div><hr>';
+    	//redirect on main page after 3 sec
+    	sleep(3);
+		header('Location: /');
+exit;
+    } else {
+    	echo '<div style="color: red;">' .array_shift($errors). '</div><hr>';
     }
 }
 

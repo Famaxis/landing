@@ -13,12 +13,12 @@ if (!isset($_SESSION['logged_user'])){
 		<section>
 			<h2>Config</h2>
 			<form action="config.php" method="POST">
-				<p>Title: <input type="text" name="title" value="<?= $query['title'] ?>"></p>
-				<p>Description: <input type="text" name="descr" value="<?= $query['descr'] ?>"></p>
+				<p>Title: <input type="text" name="title" value="<?= $query['title'] ?>" required></p>
+				<p>Description: <input type="text" name="descr" value="<?= $query['descr'] ?>" required></p>
 				
 				<p>Сolor scheme: </p>
 				<p><input name="style" type="radio" value="1" <?php if($query['style'] == 1) echo('checked'); ?>>Dark</p>
-				<p><input name="style" type="radio" value="2" <?php if($query['style'] == 2) echo('checked'); ?>>Light</p>
+				<p><input name="style" type="radio" value="2" <?php if($query['style'] != 1) echo('checked'); ?>>Light</p>
 				
 				<p><button type="submit" name="do_conf">Update</button></p>
 			</form>

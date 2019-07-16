@@ -11,7 +11,8 @@ if (isset($data['do_login'])) {
 		if (password_verify($data['password'], $query['password'])) {
 			$_SESSION['logged_user'] = $query;
 			echo '<div style="color: green;"> You have authorized successfully </div>';
-			echo '<br><a href="index.php">Main page</a><hr>';
+			//redirect on main page
+			header('Location: /');
 		} else {
 			$errors[] = 'Wrong password';
 		}
